@@ -20,7 +20,9 @@ const options = {
 const openapiSpecification = swaggerJsdoc(options);
 
 const app = express();
-app.use(cors());
+app.use(cors({
+    origin: 'https://em-services-psi.vercel.app'
+}));
 
 app.use(bodyParser.json());
 
